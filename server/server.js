@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 
 app.get("/api/home", (req, res) => {
-    res.json({message: "Hello World Server!"});
+    res.json({message: "Hello World!"});
 });
 
 const port = process.env.PORT || 8080;
