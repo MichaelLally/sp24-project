@@ -4,12 +4,9 @@ function Index() {
   
   const [message, setMessage] = useState("Loading")
 
-  if(process.env.SERVER_URL) {
-    const url = process.env.SERVER_URL // prod
-  } else {
-    const url = "http://localhost:8080" // local
-  }
+  const url = process.env.SERVER_URL ? String(process.env.SERVER_URL) : "http://localhost:8080"
 
+  console.log(url)
   useEffect(() => {
     fetch(url + "/api/home").then(
       response => response.json()
