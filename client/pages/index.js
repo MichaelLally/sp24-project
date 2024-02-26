@@ -4,9 +4,9 @@ function Index() {
   
   const [message, setMessage] = useState("Loading")
 
-  console.log(process.env.SERVER_URL)
+  console.log(process.env.NEXT_PUBLIC_SERVER_URL)
   useEffect(() => {
-    fetch(process.env.SERVER_URL + "/api/home").then(
+    fetch(process.env.NEXT_PUBLIC_SERVER_URL + "/api/home").then(
       response => response.json()
     ).then(
       data => {
