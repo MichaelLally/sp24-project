@@ -18,7 +18,7 @@ function Index() {
 
   return (
     <div>
-      <div>Return message from server</div>
+      <div>This is our new message</div>
       <div>{message}</div>
     </div>
   )
